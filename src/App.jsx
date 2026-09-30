@@ -1,3 +1,4 @@
+import { Fragment, useState } from "react";
 import './App.css'
 import city from "./assets/city.jpg";
 import ManageData from "./components/ManageData";
@@ -8,6 +9,8 @@ import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import MessageState from "./components/MessageState";
+
 
 function App() {
 
@@ -32,6 +35,8 @@ function App() {
     function showMessage() {
         console.log("Evento do componente pai");
     }
+
+    const [message, setMessage] = useState();
 
     return (
         <div className='App'>
@@ -66,6 +71,7 @@ function App() {
 
                 </Container>
 
+                <MessageState msg={message} />
 
 
 

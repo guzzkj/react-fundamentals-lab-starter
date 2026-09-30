@@ -78,7 +78,6 @@ function App() {
             {/* Fragment */}
             <Fragment />
 
-            {/* children */}
             <Container>
                 <p>Eu sou do componente superior</p>
             </Container>
@@ -87,6 +86,14 @@ function App() {
                 <div>
                     <p>Eu também</p>
                 </div>
+            </Container>
+
+            <Container>
+                <ul>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                </ul>
             </Container>
 
             {/* Função do pai executada pelo filho */}

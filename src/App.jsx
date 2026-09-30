@@ -11,6 +11,8 @@ import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import MessageState from "./components/MessageState";
 import ShowUserName from "./components/ShowUserName";
+import orbitalStation from "./assets/orbital-station.jpg";
+import orbitalStation_2 from "./assets/orbital-station-2.png";
 
 function App() {
     // Coleção utilizada para demonstrar componentização + map().
@@ -44,6 +46,10 @@ function App() {
 
                 {/* Asset importado de src/assets */}
                 <img src={city} alt="Cidade" />
+
+                <img src={orbitalStation} alt="Estação orbital futurista" />
+
+                <img src={orbitalStation_2} alt="Estação orbital futurista 2" />
             </div>
 
             {/* Variável comum x useState */}

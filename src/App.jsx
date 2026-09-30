@@ -6,10 +6,10 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
-import Fragment from "./components/Fragment";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import MessageState from "./components/MessageState";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 
 function App() {
@@ -37,6 +37,9 @@ function App() {
     }
 
     const [message, setMessage] = useState();
+    const handleMessage = (msg) => {
+        setMessage(msg);
+    };
 
     return (
         <div className='App'>
@@ -71,7 +74,9 @@ function App() {
 
                 </Container>
 
+                {/* state lift */}
                 <MessageState msg={message} />
+                <ChangeMessageState handleMessage={handleMessage} />
 
 
 

@@ -7,6 +7,7 @@ import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
                 km={car.km}
             />
         ))
+    }
+
+    function showMessage() {
+        console.log("Evento do componente pai");
     }
 
     return (
@@ -55,8 +60,13 @@ function App() {
                 <Container>
                     <div>
                         <p>Eu também sou</p>
+                        {/* event as prop */}
+                        <ExecuteFunction myFunction={showMessage} />
                     </div>
+
                 </Container>
+
+
 
 
             </div>
